@@ -40,9 +40,14 @@ $(document).ready(function(){
     $("#hide").click(function(){
         $(".dropdown-form").fadeToggle("slow","linear");
     });
+ $(".show").click(function(){
+        $(".dropdown-form").show("fast",function(){
+ $('html, body').animate({
+        scrollTop: $("#dropdown-form").offset().top
+    }, 1000);
 });
-</script>
-<script>
+    });
+});
   $(".dropdown-form").hide();
 </script>
 </head>
@@ -72,7 +77,7 @@ $(document).ready(function(){
                         <a class="page-scroll" href="#video">Gypfold in Action</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="show" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -86,7 +91,7 @@ $(document).ready(function(){
             <div class="header-content-inner">
                 <h1 style="color:black">Gypfold</h1>
                 <hr>
-                <p style="color:black">A saw for cutting drywall or soemthing</p>
+                <p style="color:black">A precision tool for clean, efficient drywall cutting.</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
@@ -116,7 +121,7 @@ $(document).ready(function(){
 	<p>Full Name: <input type="text" name="name"></p>
 	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email: <input type="email" name="_replyto"></p>
 	<p>What do you need?</p>
-	<p><input style="width:60%;height:200px" type="text" name="message"></p></p>
+	<p><input style="width:60%;height:200px" type="text" name="message"></p>
 	<p><input class="btn btn-primary btn-xl wow tada" type="submit" value="Send"></p>
       </form>
 	</div>
@@ -176,7 +181,7 @@ $(document).ready(function(){
 <section id="video">
   <div class="container">
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" width="560" height="315" src="//www.youtube.com/embed/3BwzP1laWkQ" frameborder="0" allowfullscreen></iframe>
+      <iframe class="embed-responsive-item" width="560" height="315" src="//youtu.be/l0skRmaDn0M" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -187,7 +192,7 @@ $(document).ready(function(){
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Want to make a purchase? Have a question?!</h2>
+                    <h2 class="section-heading">Want to make a purchase? Have a question?</h2>
                     <hr class="primary">
                     <p>Give us a call or send us an email and we will get back to you as soon as possible!</p>
                 </div>
@@ -197,7 +202,7 @@ $(document).ready(function(){
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-bar-chart fa-3x wow bounceIn"></i>
-                    <p><a href="#dropdown-form">Get a quote</a></p>
+                    <p><a class="show" href="#">Get a quote</a></p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
